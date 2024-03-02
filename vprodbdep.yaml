@@ -18,7 +18,8 @@ spec:
         - name: vprodb
           image: pridekun/vprodb:latest
           volumeMounts:
-            - mountPath: /var/lib/mysql
+            - name: vpro-db-data
+              mountPath: /var/lib/mysql
           ports:
             - name: vprodb-port
               containerPort: 3306
